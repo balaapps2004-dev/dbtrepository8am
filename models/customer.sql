@@ -1,0 +1,1 @@
+select id, upper(concat(firstname,'_',lastname)) as name from dev_db.bronze.t_customer
