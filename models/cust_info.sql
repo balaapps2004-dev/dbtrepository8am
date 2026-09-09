@@ -1,0 +1,1 @@
+select * from dev_Db.bronze.customers

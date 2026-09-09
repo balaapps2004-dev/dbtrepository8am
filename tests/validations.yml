@@ -1,0 +1,9 @@
+models:
+  - name: cust_info
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+          
+          
