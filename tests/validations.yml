@@ -5,5 +5,23 @@ models:
         tests:
           - unique
           - not_null
+
+  - name: order_info
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - relationships:
+              to: ref('cust_info')
+              field: customer_id
+  - name: cust_payment
+    columns:
+      - name: paymentmethod
+        tests:
+          - accepted_values:
+              values: ['credit_card','bank_transfer','coupon','gift_card']
           
-          
+

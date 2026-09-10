@@ -1,1 +1,1 @@
-select * from dev_Db.bronze.customers
+select * from {{ source('s1', 'customers') }}

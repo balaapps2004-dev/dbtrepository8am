@@ -1,0 +1,17 @@
+sources:
+  - name: s1
+    database: dev_db
+    schema: bronze
+    tables:
+      - name: t_ticket_info
+      - name: customer
+      - name: t_claims
+      - name: t_claim_events
+      - name: t_customer
+      - name: t_claim_diagnosis
+      - name: s_emp
+      - name: customers
+      - name: emp
+      - name: orders
+      - name: tgt_emp
+      - name: payment	
