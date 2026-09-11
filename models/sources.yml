@@ -5,13 +5,16 @@ sources:
     tables:
       - name: t_ticket_info
       - name: customer
-      - name: t_claims
-      - name: t_claim_events
       - name: t_customer
-      - name: t_claim_diagnosis
       - name: s_emp
       - name: customers
       - name: emp
       - name: orders
       - name: tgt_emp
       - name: payment	
+      - name: t_claims
+        identifier: T_CLAIMS
+      - name: t_claim_diagnosis
+        identifier: T_CLAIM_DIAGNOSIS
+      - name: t_claim_events
+        identifier: T_CLAIM_EVENTS      

@@ -36,6 +36,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
+  +pre-hook:
+    - "insert into dev_Db.bronze.t_audit_log(audit_type, model_name) values ('start', '{{ this.name }}')"
+
+  +post-hook:
+    - "insert into dev_Db.bronze.t_audit_log(audit_type, model_name) values ('end', '{{ this.name }}')"
   my_new_project:
     # Applies to all files under models/example/
     example:
