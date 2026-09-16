@@ -1,0 +1,31 @@
+models:
+  - name: stg_claims_info
+    columns:
+      - name: claim_id
+        data_tests:
+          - not_null
+          - unique
+      - name: updated_at
+        data_tests:
+          - not_null
+
+  - name: stg_claim_diagnosis
+    columns:
+      - name: claim_id
+        data_tests:
+          - not_null
+      - name: diagnosis_code
+        data_tests:
+          - not_null
+
+  - name: stg_claim_events
+    config:
+      event_time: event_time
+    columns:
+      - name: event_id
+        data_tests:
+          - not_null
+          - unique
+      - name: event_time
+        data_tests:
+          - not_null

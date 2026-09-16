@@ -1,0 +1,11 @@
+SELECT
+    ORDER_ID,
+    CUSTOMER_NAME,
+    ORDER_DATE,
+    PRODUCT,
+    QUANTITY,
+    UNIT_PRICE,
+    QUANTITY * UNIT_PRICE AS TOTAL_AMOUNT,
+    STATUS,
+    UPDATED_AT
+FROM {{ source('s1', 'orders') }}
