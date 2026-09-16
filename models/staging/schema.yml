@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: stg_orders
+    config:
+      event_time: ORDER_DATE

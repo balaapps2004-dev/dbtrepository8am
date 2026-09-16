@@ -43,5 +43,8 @@ models:
     - "insert into dev_Db.bronze.t_audit_log(audit_type, model_name) values ('end', '{{ this.name }}')"
   my_new_project:
     # Applies to all files under models/example/
-    example:
-      +materialized: table
+    staging:
+      +materialized: view
+    incremental:
+      +materialized: incremental
+
